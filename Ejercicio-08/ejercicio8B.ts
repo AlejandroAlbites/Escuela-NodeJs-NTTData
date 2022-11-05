@@ -65,7 +65,7 @@
   const mirarTv = (estaHorneado: boolean) => {
     return estaHorneado
       ? console.log("terminar de ver tv")
-      : console.log("mirando tv mientras se hornea la pizza");
+      : console.log("mientras se hornea la pizza, inicio el ver tv");
   };
 
   const inicioActividades = async () => {
