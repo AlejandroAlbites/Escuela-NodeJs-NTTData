@@ -14,7 +14,7 @@
           `La cantidad de tortas será ${cantidadTortas}, Kaya esta enferma`
         );
       }
-      cantidadTortas = 20;
+      cantidadTortas = 10;
       resolve(`Kaya no esta enferma, nos va preparar ${20} tortas`);
     });
   };
