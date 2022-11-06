@@ -29,13 +29,13 @@
   };
 
   const prepararPizza = () => {
-    return new Promise<boolean>((resolve) => {
+    return new Promise<void>((resolve) => {
       console.log(
         "mientras se precalienta el horno, saca la pizza y se pone en sarten de pizzas"
       );
       setTimeout(() => {
         console.log("se termino de alistar las pizzas");
-        resolve(true);
+        resolve();
       }, 3000);
     });
   };

@@ -51,8 +51,9 @@ import { CountriesResponse } from "./interface/countriesResponse";
 
   const neighborCountry = async (data: CountriesResponse) => {
     const { borders } = data;
-    return borders.map(async (border) => {
-      const neighbor = await searchByCodeCountry(border);
+    console.log(borders);
+    return borders.map(async (countryCode) => {
+      const neighbor = await searchByCodeCountry(countryCode);
       const { name } = neighbor;
       return console.log(name.common);
     });
