@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> 
+  <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <title>PDF generator</title>
+</head>
+<body>
+
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          PDF Generator
+        </h1>
+        <p class="subtitle">
+          A simple way to create business proposals
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"> 
+    <div class="section">
+
+      <form class="form">
+
+        <h2 class="title is-4">General</h2>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="proposalDate">Proposal Info</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Proposal Date" id="proposalDate">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Proposal Number" id="proposalNumber">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-align-left"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <h2 class="title is-4">From</h2>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="sender">Name</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Name" id="senderName">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="sender">Company</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Company Name" id="senderCompany">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-store-alt"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="sender">Slogan</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="" id="senderSlogan">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-align-left"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="sender">Contact</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Telephone" id="senderTel">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Location" id="senderLocation">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">  
+          <div class="field-label is-normal">
+            <label class="label" for="senderSite">Site</label>
+          </div>        
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="" id="senderSite">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-globe"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Email" id="senderEmail">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+          </div>        
+        </div>
+
+        <hr />
+
+        <h2 class="title is-4">To</h2>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="clientName">Name</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Client Name" id="clientName">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="clientName">Company</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Client Company" id="clientCompany">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-store-alt"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <h2 class="title is-4">Proposal Description</h2>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="shortDescription">Short Description</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="" id="proposalShortDescription">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-align-left"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="proposalIntroduction">Introduction</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <input type="hidden" class="form-control" id="proposalIntroduction" />
+              <div id="editorProposalIntroduction" style="min-height: 150px"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal" style="margin-top: 80px">
+          <div class="field-label is-normal">
+            <label class="label" for="projectScope">Project Scope</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <input type="hidden" class="form-control" id="projectScope" />
+              <div id="editorProjectScope" style="min-height: 150px"></div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin-top: 80px" />
+
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4">Services/Products</h1>
+          </div>
+          <div class="level-right">
+            <div class="select">
+              <select id="selectServicesType">                
+                <option value="hour" selected>Hour</option>
+                <option value="quantity">Quantity</option>
+              </select>
+            </div>
+          </div>
+        </div>        
+
+        <div class="field form-services">
+          <div class="field is-horizontal form-services__item">
+            <div class="field-label is-normal">
+              <label class="label" for="services">Item</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <input type="text" data-name="service" class="input" id="serviceProduct" placeholder="Description">
+              </div>
+              <div class="field">
+                <input type="text" data-name="hours" class="input" id="serviceHours" placeholder="Hours">
+              </div>
+              <div class="field">
+                <input type="text" data-name="price" class="input" id="serviceCostHour" placeholder="Cost per Hour">
+              </div>
+              <div class="field">
+                <input type="text" data-name="total" class="input" id="serviceTotalPrice" placeholder="Total">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped is-grouped-right">
+          <button type="button" class="button is-link is-light btn-new-service">Add Service/Product</button>
+        </div>        
+
+        <hr />
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="aditionalInformation">Aditional Information</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <input type="hidden" class="form-control" id="aditionalInformation" />
+              <div id="editorAditionalInformation" style="min-height: 150px"></div>              
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-grouped is-grouped-right" style="margin-top: 80px">
+          <button type="submit" class="button is-primary" data-label="Create PDF">Create PDF</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+  <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  
+</body>
+</html>
