@@ -1,0 +1,4 @@
+FROM httpd:latest
+ADD index.html /usr/local/apache2/htdocs/
+COPY docker-logo.png /usr/local/apache2/htdocs/docker.png
+EXPOSE 80
